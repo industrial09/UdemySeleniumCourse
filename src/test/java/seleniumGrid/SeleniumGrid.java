@@ -2,6 +2,7 @@ package seleniumGrid;
 
 import java.net.URL;
 
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -18,6 +19,7 @@ public class SeleniumGrid {
 	public void setup() {
 		//Look for solution on this
 		//Seems like new version of DesiredCapabilities has changed on this
+		//solution: https://www.youtube.com/watch?v=_TiSY21Yp98
 		DesiredCapabilities cap = DesiredCapabilities.chrome();
 		driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), cap);
 		driver.manage().window().maximize();
@@ -25,6 +27,7 @@ public class SeleniumGrid {
 	
 	@Test
 	public void testTitle() {
+		driver.get(appUrl);
 		String googleTitle = driver.getTitle();
 		Assert.assertTrue(googleTitle.equals("Google"));
 	}
