@@ -1,0 +1,10 @@
+Selenium commands to execute on Command:
+1. We need to make Selenium -hub to be Up
+java -jar nameOfSeleniumGrid -role hub
+
+2. Then we need to create a Selenium Node:
+Remember we can have more than 1 node running in our machine
+java -jar nameOfSeleniumGrid -role webdriver -hub nameOfPrintedLocation -port 5556
+
+3. We can attach every browser driver with Browser instance as part of Setup when creating the node, with following command:
+java -Dwebdriver.chrome.driver = completePathOfBrowserDriver.exe -Dwebdriver.ie.driver = completePathOfBrowserDriver.exe -jar nameOfSeleniumGrid -role webdriver -hub nameOfPrintedLocation -port 5555 -browser browserName = chrome, maxInstances=2 -browser browserName = iexplorer, maxInstances = 2
