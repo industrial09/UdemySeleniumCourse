@@ -1,0 +1,12 @@
+Multiple workflows with the same Postman collection:
+https://www.youtube.com/watch?v=FWYKOR0Zj28
+
+LOGIC CODE (to be written in Tests tab section) FOR STOPPING ENDLESS ITERATION while using -> postman.setNextrequest("RequestName");
+
+//In this case if getting value different to null Postman understand that should execute code inside
+if(pm.globals.get("globalVariableName"){
+	//Sending a null value will stop the iteration
+	postman.setNextrequest(null);
+}
+
+pm.globals.set("globalVariableName", 1);

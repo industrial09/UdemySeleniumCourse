@@ -1,0 +1,11 @@
+3 ways to access and run POSTMAN COLLECTIONS with <<"NEWMAN">>:
+(Look at how to specify a Postman environment inside a Postman collection)
+https://github.com/postmanlabs/newman
+
+Way to access and run POSTMAN COLLECTIONS with <<"JENKINS">>:
+https://github.com/postmanlabs/newman#using-newman-with-the-postman-api
+https://www.youtube.com/results?search_query=run+postman+collections+with+jenkins
+
+For better HTML report generation:
+https://www.npmjs.com/package/newman-reporter-htmlextra
+
