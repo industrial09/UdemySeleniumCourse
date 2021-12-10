@@ -1,0 +1,4 @@
+//WAY TO ACCESS TO VALUES STORED IN EXTERNAL RESOURCES AS JSON or CSV:
+// This value can only be accessed in Tests tab (section) of our request, because Postman
+// needs to access first to this values in the Body section
+pm.iterationData.get("nameOfVariableInExternal Resource");
