@@ -2,3 +2,13 @@
 // This value can only be accessed in Tests tab (section) of our request, because Postman
 // needs to access first to this values in the Body section
 pm.iterationData.get("nameOfVariableInExternal Resource");
+
+//SendRequest Function can be used inside another request
+// just to access the data brought from that request executed
+//To be defined in Pre-request script
+pm.sendRequest("url Request", function(error, response){
+	const data = response.json();
+	//This value can be used in the Body section of current request
+	//where this value in being defined
+	pm.globals.set("globalVariable", data.attribute);
+}); 
