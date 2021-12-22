@@ -1,0 +1,16 @@
+//Steps to run on Slave servers having a master/local machine, from which one Test Plans will be executed.
+//In this case using a different/another machine can work as a Slave server
+//Following steps below need to be done first in the Slave machine
+1. Search for jmeter.properties file in subfolder "bin", open file
+2. Search for "server.rmi.ssl.disable=false" attribute and change to true.
+3. Open in same location "jmeter-server" batch file and open it.
+4. Once open, endpoint is the interested value to work with
+
+//Following steps below need to be done after in the Master machine
+1. Search for jmeter.properties file in subfolder "bin", open file
+2. Search for "server.rmi.ssl.disable=false" attribute and change to true.
+2. Search for "remote_hosts" attribute and change to endpoint gotten from Slave machine; default is localhost 127.0.0.1
+3. Restart Jmeter in Master machine. Open it again.
+4. Open any Test Plan and Run it as Run -> Remote start -> Select remote endpoint
+
+C:\Users\Christian Bautista\AppData\Local\Android\Sdk
